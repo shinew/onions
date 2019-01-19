@@ -32,6 +32,8 @@ response = client.label_detection(image=image)
 
 def is_onion(response):
     labels = response.label_annotations
+    print(labels)
+    return True
     for label in labels:
         if label.description == 'onion' and \
            label.score > 0.7:
